@@ -4,6 +4,6 @@ ora
 pyyaml
 requests
 rich
-sanic ==21.6
+sanic ==21.12.2
 sqlalchemy
 ujson
