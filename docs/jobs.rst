@@ -161,14 +161,14 @@ the dependent job, it may be omitted; the same arg is used.
 Skipping Duplicates
 '''''''''''''''''''
 
-The `skip_duplicates` condition causes a run to transition to the _skipped_
+The `skip_duplicate` condition causes a run to transition to the _skipped_
 state if there is another run with the same job ID and arguments that is either
 waiting or running.
 
 .. code:: yaml
 
     condition:
-        type: skip_duplicates
+        type: skip_duplicate
 
 By default, Apsis looks for other runs in the _waiting_, _starting_, or
 _running_ states to determine whether to skip this run.  You can override this
@@ -179,7 +179,7 @@ another run in either of the _failure_ or _error_ states:
 .. code:: yaml
 
     condition:
-      type: skip_duplicates
+      type: skip_duplicate
       check_states: [failure, error]
       target_state: error
 
